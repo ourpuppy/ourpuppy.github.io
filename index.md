@@ -30,6 +30,7 @@ lang: ko
 - 게임 난이도·밸런스 개선과 오류 분석(GameAnalytics)
 
 ## 3. 개인정보의 제3자 제공 및 국외 이전
+
 | 항목 | 내용 |
 |---|---|
 | 제공받는 자 | Google LLC |
@@ -48,9 +49,9 @@ lang: ko
 | 이용 목적 | 게임 이용 통계 분석 |
 | 보유·이용 기간 | GameAnalytics의 개인정보처리방침에 따름 |
 
-Google의 정보 처리 방식: https://policies.google.com/technologies/partner-sites
-Google 개인정보처리방침: https://policies.google.com/privacy
-GameAnalytics 개인정보처리방침: https://gameanalytics.com/privacy
+- Google의 정보 처리 방식: https://policies.google.com/technologies/partner-sites
+- Google 개인정보처리방침: https://policies.google.com/privacy
+- GameAnalytics 개인정보처리방침: https://gameanalytics.com/privacy
 
 ## 4. 보유 및 이용 기간
 개발자는 이용자의 개인정보를 별도로 보관하지 않습니다. 광고·분석 서비스가 수집한 정보는 각 회사(Google, GameAnalytics)의 정책에 따라 보관·파기됩니다.
