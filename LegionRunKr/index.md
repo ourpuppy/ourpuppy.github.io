@@ -14,7 +14,7 @@ title: 레기온 런 이용약관 및 개인정보 처리방침
 |---|---|
 | 서비스 | 모바일 게임 「레기온 런 (Legion Run)」 |
 | 개발사 | OurPuppy |
-| 문의 | ✉️ (문의 이메일을 입력하세요) |
+| 문의 | ✉️ [ourpuppy8373@gmail.com](mailto:ourpuppy8373@gmail.com) |
 | 시행일 | 2026년 10월 1일 |
 
 ---
@@ -123,7 +123,7 @@ OurPuppy(이하 "개발사")는 「개인정보 보호법」 등 관련 법령�
 | 항목 | 내용 |
 |---|---|
 | 책임자 | OurPuppy 대표 |
-| 연락처 | ✉️ (문의 이메일을 입력하세요) |
+| 연락처 | ✉️ [ourpuppy8373@gmail.com](mailto:ourpuppy8373@gmail.com) |
 
 개인정보 침해에 대한 신고나 상담은 아래 기관에도 할 수 있습니다.
 - 개인정보침해신고센터: 국번 없이 118 (<https://privacy.kisa.or.kr>)
