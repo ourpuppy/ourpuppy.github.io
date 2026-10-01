@@ -14,7 +14,7 @@ This page contains both the **Terms of Service** and the **Privacy Policy** for 
 |---|---|
 | Service | Mobile game "Legion Run" |
 | Developer | OurPuppy |
-| Contact | ✉️ (enter your contact email) |
+| Contact | ✉️ [ourpuppy8373@gmail.com](mailto:ourpuppy8373@gmail.com) |
 | Effective date | October 1, 2026 |
 
 ---
@@ -123,6 +123,6 @@ If we change this policy, we will post the updated version on this page at least
 | Item | Details |
 |---|---|
 | Developer | OurPuppy |
-| Email | ✉️ (enter your contact email) |
+| Email | ✉️ [ourpuppy8373@gmail.com](mailto:ourpuppy8373@gmail.com) |
 
 - Effective date: October 1, 2026
