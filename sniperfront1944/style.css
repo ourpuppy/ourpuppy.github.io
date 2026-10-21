@@ -1,0 +1,29 @@
+body { font-family: -apple-system, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", Roboto, Arial, sans-serif; max-width: 820px; margin: 0 auto; padding: 24px 18px 60px; line-height: 1.7; color: #222; word-break: keep-all; background: #fff; }
+h1 { font-size: 1.65em; margin: 0.2em 0 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid #ddd; padding-bottom: 4px; font-size: 1.25em; }
+a { color: #b4541a; }
+.meta { color: #666; font-size: 0.95em; }
+.top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 0.95em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.top .brand { font-weight: 700; color: #333; text-decoration: none; }
+.nav a { display: inline-block; margin: 6px 8px 6px 0; padding: 6px 12px; background: #f1f1f1; border-radius: 6px; text-decoration: none; color: #222; }
+.nav a.on { background: #e0782a; color: #fff; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f4f4f4; }
+code { background: #f3f3f3; padding: 1px 4px; border-radius: 3px; }
+.box { background: #fff7ec; border: 1px solid #f0d9b5; border-radius: 6px; padding: 12px 16px; }
+.step { background: #fff7ec; border-left: 4px solid #e0782a; padding: 8px 14px; margin: 10px 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 14px 16px; }
+.card h2 { margin-top: 0; border: 0; }
+.card a { display: block; padding: 6px 0; }
+footer { margin-top: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #161616; color: #ddd; }
+  a { color: #f0a060; }
+  .nav a { background: #2a2a2a; color: #ddd; }
+  th { background: #222; } th, td, .card, .top, footer { border-color: #333; }
+  code { background: #2a2a2a; }
+  .box, .step { background: #2a2116; border-color: #5a4326; }
+  .top .brand { color: #eee; }
+}
