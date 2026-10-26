@@ -233,3 +233,4 @@ xandr.com, 17779, RESELLER
 zetaglobal.net, 525, RESELLER
 zmaticoo.com, 5135195, RESELLER
 zmaticoo.com, 5135703, RESELLER
+dauup.com, 34222, RESELLER, 4daba13e2b0dfd9
