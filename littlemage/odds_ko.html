@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>확률형 아이템 정보 — 마법사 키우기 : 방치형 RPG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>마법사 키우기 : 방치형 RPG</h1>
+  <p>확률형 아이템 정보</p>
+</header>
+<nav class="lang"><a class="on" href="odds_ko.html">한국어</a><a href="odds_en.html">English</a><a href="odds_ja.html">日本語</a></nav>
+<nav class="docs"><a href="terms_ko.html">이용약관</a><a href="privacy_ko.html">개인정보처리방침</a><a href="delete_ko.html">데이터 삭제</a></nav>
+<main>
+<section class="doc">
+<h2>확률형 아이템 정보</h2>
+<p class="meta">기준일: 2026년 10월 27일 · 출시 버전부터 적용</p>
+<!-- 원본 데이터: Assets/_Project/Resources/Data/Grades.csv(rate), Spells.csv(6종), Balance.csv(summon.cost1/10/30, summon.ad_count, ad.summon_daily), Game/Player.Spells.cs(Summon·RollGrade), Game/Shop.cs(spellGrade). CSV를 바꾸면 이 페이지와 odds_en/odds_ja/odds.html을 함께 고친다. -->
+<p>이 게임의 확률형 아이템은 <b>마법 뽑기</b>와 <b>무작위 마법이 들어 있는 상품</b>입니다. 마법 뽑기는 한 번 뽑을 때마다 ① 아래 등급 확률로 등급을 정하고, ② 마법 6종(화염구, 메테오, 얼음창, 눈보라, 번개, 연쇄 번개) 중 하나를 같은 확률(각 1/6)로 정합니다. 뽑기는 매번 독립적이며, 앞의 결과에 따라 확률이 바뀌거나 정해진 횟수 뒤에 보장되는 장치(천장)는 없습니다. 보석을 유료로 샀는지 무료로 얻었는지, 마법 뽑기권이나 광고 무료 뽑기인지와 관계없이 확률은 같습니다. 같은 등급 확률표를 게임 마법 화면의 「확률 보기」에서도 볼 수 있습니다.</p>
+
+<h3>마법 뽑기</h3>
+<p>얻는 곳: 마법 화면. 보석은 상점의 유료 상품(보석 상품, 스타터 패키지, 성장 패키지 I·II)으로 사거나 플레이로 무료로 얻을 수 있습니다.</p>
+<table>
+<tr><th>뽑기</th><th>비용</th><th class="num">뽑는 개수</th></tr>
+<tr><td>1회 뽑기</td><td>보석 50 (마법 뽑기권이 있으면 뽑기권 1장을 먼저 사용)</td><td class="num">1</td></tr>
+<tr><td>10회 뽑기</td><td>보석 450</td><td class="num">10</td></tr>
+<tr><td>30회 뽑기</td><td>보석 1,300</td><td class="num">30</td></tr>
+<tr><td>무료 뽑기</td><td>보상형 광고 시청 (하루 3회)</td><td class="num">5</td></tr>
+<tr><td>튜토리얼 첫 뽑기</td><td>무료 (처음 한 번)</td><td class="num">5</td></tr>
+</table>
+
+<table>
+<tr><th>등급</th><th class="num">1개 뽑을 때 확률</th><th class="num">마법 종류 수</th></tr>
+<tr><td>신화</td><td class="num">0.01%</td><td class="num">6</td></tr>
+<tr><td>전설</td><td class="num">0.49%</td><td class="num">6</td></tr>
+<tr><td>영웅</td><td class="num">3%</td><td class="num">6</td></tr>
+<tr><td>희귀</td><td class="num">9.5%</td><td class="num">6</td></tr>
+<tr><td>고급</td><td class="num">25%</td><td class="num">6</td></tr>
+<tr><td>일반</td><td class="num">62%</td><td class="num">6</td></tr>
+<tr><th>합계</th><th class="num">100%</th><th class="num"></th></tr>
+</table>
+
+<p>마법·등급별 확률 (1개 뽑을 때, 마법별 확률 = 등급 확률 ÷ 6)</p>
+<table class="matrix">
+<tr><th>마법</th><th class="num">신화</th><th class="num">전설</th><th class="num">영웅</th><th class="num">희귀</th><th class="num">고급</th><th class="num">일반</th><th class="num">마법 합계</th></tr>
+<tr><td>화염구</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><td>메테오</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><td>얼음창</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><td>눈보라</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><td>번개</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><td>연쇄 번개</td><td class="num">0.0017%</td><td class="num">0.0817%</td><td class="num">0.5%</td><td class="num">1.5833%</td><td class="num">4.1667%</td><td class="num">10.3333%</td><td class="num">16.6667%</td></tr>
+<tr><th>등급 합계</th><th class="num">0.01%</th><th class="num">0.49%</th><th class="num">3%</th><th class="num">9.5%</th><th class="num">25%</th><th class="num">62%</th><th class="num">100%</th></tr>
+</table>
+
+<h3>무작위 마법이 들어 있는 유료 상품</h3>
+<p>아래 상품은 등급이 정해진 마법 1개가 들어 있으며, 마법 종류는 6종 중 같은 확률로 정해집니다. 가격과 나머지 구성은 상점 구매 화면에 표시합니다.</p>
+<table>
+<tr><th>상품</th><th>판매 조건</th><th>들어 있는 마법</th><th>마법별 확률</th></tr>
+<tr><td>스타터 패키지</td><td>스테이지 1-10 보스 처치 후, 1회 한정</td><td>영웅 등급 마법 1개 (등급 확정)</td><td>화염구·메테오·얼음창·눈보라·번개·연쇄 번개 각 16.6667% (1/6)</td></tr>
+<tr><td>성장 패키지 II</td><td>첫 환생 후 24시간 한정, 1회 한정</td><td>전설 등급 마법 1개 (등급 확정)</td><td>화염구·메테오·얼음창·눈보라·번개·연쇄 번개 각 16.6667% (1/6)</td></tr>
+</table>
+
+<h3>무료로 얻는 무작위 마법</h3>
+<table>
+<tr><th>얻는 곳</th><th>들어 있는 마법</th><th>마법별 확률</th></tr>
+<tr><td>7일 출석 7일째 보상</td><td>신화 등급 마법 1개 (등급 확정)</td><td>6종 각 16.6667% (1/6)</td></tr>
+</table>
+
+<h3>합성 (확률 없음)</h3>
+<p>같은 마법·같은 등급 3개를 합성하면 한 등급 위의 같은 마법 1개가 됩니다. 합성은 항상 성공하며 확률 요소가 없습니다.</p>
+
+<div class="box">확률은 소수 다섯째 자리에서 반올림하여 표시했습니다(정확한 값은 등급 확률 ÷ 6). 확률이나 뽑기·상품 구성을 바꾸면 바꾸기 전에 게임 안과 이 페이지에 알립니다.</div>
+</section>
+</main>
+<footer>© 2026 OurPuppy · Idle Mage</footer>
+</body>
+</html>
