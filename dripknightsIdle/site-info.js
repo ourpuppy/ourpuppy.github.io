@@ -1,30 +1,42 @@
-// 때깔 용사 키우기 — 공통 정보·언어 전환·머리글/바닥글. 이 파일만 고치면 모든 페이지에 반영된다.
+// 때깔 용사 키우기 — 공통 정보·언어 전환(한/영/일)·머리글/바닥글. 이 파일만 고치면 모든 페이지에 반영된다.
 window.SITE_INFO = {
   gameKo: "때깔 용사 키우기 : 방치형 RPG",
   gameEn: "Drip Knights: Idle RPG",
+  gameJa: "ドリップナイツ：放置系RPG",
   packageName: "com.ourpuppy.dripknights",
   developer: "OurPuppy",
+  developerKo: "OurPuppy (우리강아지)",
   email: "ourpuppy8373@gmail.com",
-  effectiveKo: "2026년 10월 19일",
-  effectiveEn: "October 19, 2026",
+  effectiveKo: "2026년 10월 28일",
+  effectiveEn: "October 28, 2026",
+  effectiveJa: "2026年10月28日",
   // Play 스토어 등록 뒤 실제 주소로 바꾼다
   storeUrl: "https://play.google.com/store/apps/details?id=com.ourpuppy.dripknights",
   pages: [
-    { file: "index.html", ko: "홈", en: "Home" },
-    { file: "privacy-policy.html", ko: "개인정보처리방침", en: "Privacy Policy" },
-    { file: "data-deletion.html", ko: "데이터 삭제", en: "Data Deletion" },
-    { file: "terms.html", ko: "이용약관", en: "Terms of Service" }
+    { file: "index.html", ko: "홈", en: "Home", ja: "ホーム" },
+    { file: "privacy-policy.html", ko: "개인정보처리방침", en: "Privacy Policy", ja: "プライバシーポリシー" },
+    { file: "terms.html", ko: "이용약관", en: "Terms of Service", ja: "利用規約" },
+    { file: "legal.html", ko: "판매자 정보·법적 고지", en: "Seller Info & Legal Notices", ja: "特定商取引法に基づく表記・法的表示" },
+    { file: "data-deletion.html", ko: "데이터 삭제", en: "Data Deletion", ja: "データ削除" }
   ]
 };
 
 (function () {
   var info = window.SITE_INFO;
+  var LANGS = [
+    { code: "ko", label: "한국어" },
+    { code: "en", label: "English" },
+    { code: "ja", label: "日本語" }
+  ];
+
+  function valid(l) { return l === "ko" || l === "en" || l === "ja"; }
 
   function currentLang() {
     var h = (location.hash || "").replace("#", "").toLowerCase();
-    if (h === "en" || h === "ko") return h;
-    try { var saved = localStorage.getItem("dk_lang"); if (saved === "en" || saved === "ko") return saved; } catch (e) {}
-    return /^ko/i.test(navigator.language || "") ? "ko" : "en";
+    if (valid(h)) return h;
+    try { var saved = localStorage.getItem("dk_lang"); if (valid(saved)) return saved; } catch (e) {}
+    var n = (navigator.language || "").toLowerCase();
+    return /^ko/.test(n) ? "ko" : /^ja/.test(n) ? "ja" : "en";
   }
 
   function currentFile() {
@@ -32,29 +44,27 @@ window.SITE_INFO = {
     return p && p.indexOf(".html") > 0 ? p : "index.html";
   }
 
+  function pick(lang, ko, en, ja) { return lang === "ko" ? ko : lang === "ja" ? ja : en; }
+
   function apply(lang) {
-    var isKo = lang === "ko";
     document.documentElement.lang = lang;
     try { localStorage.setItem("dk_lang", lang); } catch (e) {}
-    // 언어 블록 토글
     document.querySelectorAll("[data-lang]").forEach(function (el) {
       el.hidden = el.getAttribute("data-lang") !== lang;
     });
-    // 언어 버튼
     document.querySelectorAll(".lang a").forEach(function (a) {
       a.classList.toggle("on", a.getAttribute("data-set-lang") === lang);
     });
-    // 제목(브라우저 탭)
     var t = document.querySelector("title");
     if (t) {
-      var ko = t.getAttribute("data-ko"), en = t.getAttribute("data-en");
-      if (ko && en) t.textContent = isKo ? ko : en;
+      var v = t.getAttribute("data-" + lang);
+      if (v) t.textContent = v;
     }
-    // 공통 값
     document.querySelectorAll("[data-info]").forEach(function (el) {
       var key = el.getAttribute("data-info");
-      if (key === "game") el.textContent = isKo ? info.gameKo : info.gameEn;
-      else if (key === "effective") el.textContent = isKo ? info.effectiveKo : info.effectiveEn;
+      if (key === "game") el.textContent = pick(lang, info.gameKo, info.gameEn, info.gameJa);
+      else if (key === "effective") el.textContent = pick(lang, info.effectiveKo, info.effectiveEn, info.effectiveJa);
+      else if (key === "developerName") el.textContent = lang === "ko" ? info.developerKo : info.developer;
       else if (info[key] !== undefined) el.textContent = info[key];
     });
     document.querySelectorAll("[data-info-href]").forEach(function (el) {
@@ -73,31 +83,41 @@ window.SITE_INFO = {
     buildFooter(lang);
   }
 
+  function buildLangSwitch() {
+    document.querySelectorAll(".lang").forEach(function (box) {
+      var html = "";
+      LANGS.forEach(function (l) { html += '<a href="#' + l.code + '" data-set-lang="' + l.code + '">' + l.label + "</a>"; });
+      box.innerHTML = html;
+    });
+  }
+
   function buildNav(lang) {
     var nav = document.getElementById("site-nav");
     if (!nav) return;
     var file = currentFile(), html = "";
     info.pages.forEach(function (p) {
-      html += '<a href="' + p.file + "#" + lang + '"' + (p.file === file ? ' class="current"' : "") + ">" + (lang === "ko" ? p.ko : p.en) + "</a>";
+      html += '<a href="' + p.file + "#" + lang + '"' + (p.file === file ? ' class="current"' : "") + ">" + p[lang] + "</a>";
     });
     nav.innerHTML = html;
     var logo = document.getElementById("site-logo");
-    if (logo) { logo.textContent = lang === "ko" ? info.gameKo : info.gameEn; logo.setAttribute("href", "index.html#" + lang); }
+    if (logo) { logo.textContent = pick(lang, info.gameKo, info.gameEn, info.gameJa); logo.setAttribute("href", "index.html#" + lang); }
   }
 
   function buildFooter(lang) {
     var f = document.getElementById("site-footer");
     if (!f) return;
-    var isKo = lang === "ko", links = "";
-    info.pages.forEach(function (p) { links += '<a href="' + p.file + "#" + lang + '">' + (isKo ? p.ko : p.en) + "</a>"; });
+    var links = "";
+    info.pages.forEach(function (p) { links += '<a href="' + p.file + "#" + lang + '">' + p[lang] + "</a>"; });
     f.innerHTML =
       '<div class="links">' + links + "</div>" +
-      "<p>" + (isKo ? "개발자" : "Developer") + ": " + info.developer + " · " + (isKo ? "문의" : "Contact") + ': <a href="mailto:' + info.email + '">' + info.email + "</a></p>" +
-      "<p>" + (isKo ? "패키지명" : "Package") + ": <code>" + info.packageName + "</code></p>" +
+      "<p>" + pick(lang, "개발자", "Developer", "開発元") + ": " + (lang === "ko" ? info.developerKo : info.developer) + " · " +
+      pick(lang, "문의", "Contact", "お問い合わせ") + ': <a href="mailto:' + info.email + '">' + info.email + "</a></p>" +
+      "<p>" + pick(lang, "패키지명", "Package", "パッケージ名") + ": <code>" + info.packageName + "</code></p>" +
       "<p>© 2026 " + info.developer + ". All rights reserved.</p>";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    buildLangSwitch();
     document.querySelectorAll(".lang a").forEach(function (a) {
       a.addEventListener("click", function (e) {
         e.preventDefault();
