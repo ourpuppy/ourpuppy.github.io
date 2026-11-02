@@ -1,0 +1,27 @@
+:root { --bg:#f6f3ea; --fg:#1c1c1e; --muted:#5c5f6b; --accent:#8a6d1f; --gold:#d9b54a; --card:#fffdf7; --line:#e3dcc8; --headfg:#f5eedc; --headsub:#d9b54a; }
+@media (prefers-color-scheme: dark) { :root { --bg:#081a20; --fg:#f5eedc; --muted:#b9c9c9; --accent:#e5c45c; --card:#10303a; --line:#27505a; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:18px/1.8 -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; }
+header { background:linear-gradient(180deg, #10303a, #1c4c58); color:var(--headfg); padding:30px 16px; text-align:center; border-bottom:3px solid var(--gold); }
+header h1 { margin:0; font-size:24px; letter-spacing:.5px; font-family:"Noto Serif KR", "Apple Myungjo", "Nanum Myeongjo", serif; }
+header p { margin:6px 0 0; color:var(--headsub); font-size:15px; }
+nav.docs { display:flex; flex-wrap:wrap; gap:8px 14px; justify-content:center; padding:12px; position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); font-size:15px; }
+nav.docs a { padding:6px 16px; border:1px solid var(--line); border-radius:20px; color:var(--fg); text-decoration:none; }
+nav.docs a.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+nav.docs a:hover { border-color:var(--accent); color:var(--accent); }
+main { max-width:860px; margin:0 auto; padding:16px; }
+section.doc { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 22px; margin:20px 0; }
+h2 { font-size:22px; margin-top:0; border-bottom:2px solid var(--gold); padding-bottom:8px; }
+h3 { font-size:18px; margin-top:28px; color:var(--accent); }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px; display:block; overflow-x:auto; }
+th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:rgba(217,181,74,.14); }
+dl.kv { display:grid; grid-template-columns:minmax(120px, 34%) 1fr; margin:12px 0; border-top:1px solid var(--line); }
+dl.kv dt, dl.kv dd { margin:0; padding:9px 10px; border-bottom:1px solid var(--line); }
+dl.kv dt { font-weight:600; background:rgba(217,181,74,.10); }
+ol.steps li { margin:6px 0; }
+.meta { color:var(--muted); font-size:15px; }
+.box { border-left:4px solid var(--gold); background:rgba(217,181,74,.10); padding:12px 14px; border-radius:6px; margin:14px 0; }
+a { color:var(--accent); }
+code { font-size:.95em; }
+footer { text-align:center; color:var(--muted); font-size:14px; padding:24px 16px 40px; }
