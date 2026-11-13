@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>確率情報 — どうぶつ画家そだて (OurPuppy)</title>
+<style>
+:root{--bg:#F6F1E4;--ink:#2B2436;--muted:#6B6273;--card:#FFFDF7;--line:#DCD1B6;--tint:#EFE7D1;--accent:#1F6F78;color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+html[lang=ja] body{font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;word-break:normal;line-break:strict}
+a{color:var(--accent)}
+header{padding:26px 16px 16px;text-align:center}
+header h1{margin:0;font-size:21px;line-height:1.4}
+header p{margin:6px 0 0;color:var(--muted);font-size:14px}
+header::after{content:"";display:block;width:132px;height:6px;margin:14px auto 0;border-radius:3px;background:linear-gradient(90deg,#E8574F 0 33.3%,#F5C947 33.3% 66.6%,#4F9BE8 66.6%)}
+nav{display:flex;flex-wrap:wrap;justify-content:center}
+nav.lang{gap:8px;padding:6px 12px}
+nav.lang a{padding:6px 16px;border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--ink);text-decoration:none;font-size:14px}
+nav.lang a.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+nav.docs{gap:4px 14px;padding:6px 12px 0;font-size:14px}
+main{max-width:860px;margin:0 auto;padding:8px 16px 16px}
+section.doc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 20px;margin:14px 0}
+h2{font-size:20px;margin:0 0 4px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+h2.next{margin-top:36px}
+h3{font-size:17px;margin:28px 0 6px}
+p{margin:10px 0}
+.meta{color:var(--muted);font-size:14px}
+.box{border-left:4px solid var(--accent);background:var(--tint);padding:12px 14px;border-radius:6px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;line-height:1.6;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;min-width:86px}
+th{background:var(--tint)}
+td.num,th.num{text-align:right;min-width:72px}
+td.num{white-space:nowrap}
+table.wide th,table.wide td{min-width:116px}
+table.wide td:nth-child(2){min-width:230px}
+dl.kv{display:grid;grid-template-columns:minmax(104px,34%) 1fr;margin:12px 0;border-top:1px solid var(--line)}
+dl.kv dt,dl.kv dd{margin:0;padding:9px 10px;border-bottom:1px solid var(--line)}
+dl.kv dt{font-weight:600;background:var(--tint)}
+ol.steps{padding-left:22px}
+ol.steps li{margin:6px 0}
+code{font-size:14px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:16px 16px 40px}
+</style>
+</head>
+<body>
+<header>
+  <h1>どうぶつ画家そだて：色まぜディフェンス</h1>
+  <p>確率情報 · OurPuppy</p>
+</header>
+<nav class="lang"><a href="odds_en.html" lang="en">English</a><a href="odds_ko.html" lang="ko">한국어</a><a class="on" href="odds_ja.html" lang="ja">日本語</a></nav>
+<nav class="docs"><a href="terms_ja.html">利用規約</a><a href="privacy_ja.html">プライバシーポリシー</a><a href="delete_ja.html">データ削除</a><a href="tokushoho.html">特定商取引法に基づく表記</a></nav>
+<main>
+<section class="doc">
+<h2>確率情報（画家ガチャ）</h2>
+<p class="meta">基準日：2026年11月12日 ・ ゲーム内の画家ガチャ画面の「確率」と同じ値です ・ 開発元：OurPuppy ・ <a href="mailto:ourpuppy8373@gmail.com">ourpuppy8373@gmail.com</a></p>
+<p>画家ガチャは、確率により内容が決まる商品（ガチャ）です。1回引くごとに画家が1体出ます。まず下記の確率でレア度が決まり、そのレア度の画家の中から1体が等確率で選ばれます。10回ガチャの各回や、広告を見て引く無料ガチャを含め、すべてのガチャはそれまでの結果にかかわらず同じ確率です。</p>
+
+<h3>レア度別の確率</h3>
+<table>
+<tr><th>レア度</th><th class="num">確率</th><th class="num">画家の数</th><th class="num">1体あたりの確率</th></tr>
+<tr><td>エピック</td><td class="num">5%</td><td class="num">5</td><td class="num">1%</td></tr>
+<tr><td>レア</td><td class="num">23%</td><td class="num">6</td><td class="num">3.833%</td></tr>
+<tr><td>ノーマル</td><td class="num">72%</td><td class="num">9</td><td class="num">8%</td></tr>
+</table>
+
+<h3>画家別の確率</h3>
+<table>
+<tr><th>画家</th><th>レア度</th><th class="num">1回あたりの確率</th></tr>
+<tr><td>オオカミ</td><td>エピック</td><td class="num">1%</td></tr>
+<tr><td>サイ</td><td>エピック</td><td class="num">1%</td></tr>
+<tr><td>チーター</td><td>エピック</td><td class="num">1%</td></tr>
+<tr><td>ゾウ</td><td>エピック</td><td class="num">1%</td></tr>
+<tr><td>シロフクロウ</td><td>エピック</td><td class="num">1%</td></tr>
+<tr><td>フラミンゴ</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>オウム</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>フクロウ</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>トナカイ</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>アライグマ</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>アシカ</td><td>レア</td><td class="num">3.833%</td></tr>
+<tr><td>ネコ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>キツネ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>ペンギン</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>ウサギ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>ヒヨコ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>アヒル</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>ブタ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>こいぬ</td><td>ノーマル</td><td class="num">8%</td></tr>
+<tr><td>ヒツジ</td><td>ノーマル</td><td class="num">8%</td></tr>
+</table>
+
+<h3>すでに持っている画家が出た場合</h3>
+<p>すでに持っている画家が出ると、その画家の星が1つ上がります（最大5）。すでに星5の画家が出た場合は、ジェムとして戻ります：ノーマル 10、レア 25、エピック 60。</p>
+<h3>絵カード（ボスの宝箱）</h3>
+<p>ボスを倒すと宝箱から絵カードが3枚出て、その中から1枚を選びます。3枚は下記の確率で1枚ずつ、重複なしで選ばれます。ジェムを使う「引き直し」も同じ確率で3枚を新しく引きます。いま使っているカードは出ず、その分ほかのカードの確率が同じ割合で上がります。</p>
+<table>
+<tr><th>カード</th><th>レア度</th><th class="num">1枚あたりの確率</th></tr>
+<tr><td>はたらきものの画家</td><td>エピック</td><td class="num">2.727%</td></tr>
+<tr><td>金のにおい</td><td>エピック</td><td class="num">2.727%</td></tr>
+<tr><td>とびちる絵の具</td><td>レア</td><td class="num">5.455%</td></tr>
+<tr><td>ふくらむれんさ</td><td>レア</td><td class="num">5.455%</td></tr>
+<tr><td>かさねぬり</td><td>レア</td><td class="num">5.455%</td></tr>
+<tr><td>雨雲の絵の具</td><td>レア</td><td class="num">5.455%</td></tr>
+<tr><td>赤たっぷり</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>黄色たっぷり</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>青たっぷり</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>まぜる名人</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>ふくらむおさいふ</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>たのもしい見習い</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>じょうぶなフェンス</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+<tr><td>すばやい手</td><td>ノーマル</td><td class="num">9.091%</td></tr>
+</table>
+
+<div class="box">確率は小数点第4位を四捨五入しています。確率や画家の一覧を変更する場合は、適用前に本ページを更新します。</div>
+</section>
+</main>
+<footer>© 2026 OurPuppy · どうぶつ画家そだて<br>開発元: OurPuppy · お問い合わせ: <a href="mailto:ourpuppy8373@gmail.com">ourpuppy8373@gmail.com</a> · <a href="index.html">文書一覧</a></footer>
+</body>
+</html>
