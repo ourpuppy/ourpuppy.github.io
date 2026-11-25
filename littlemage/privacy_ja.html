@@ -37,7 +37,7 @@
 <tr><td>お問い合わせ（メール）</td><td>メールアドレス、お問い合わせ内容、プレイヤーID、端末の機種</td><td>お問い合わせへの回答、データ削除の対応</td><td>ご本人の依頼</td></tr>
 </table>
 <p>プレイヤーIDは、初回起動時に端末内でランダムに作成される12文字の値で、氏名や連絡先とは結び付いておらず、GameAnalytics のユーザーIDおよび LevelPlay のユーザーIDとしても使用します。</p>
-<p>任意の項目に同意しなくても、本ゲームのすべての機能をご利用いただけます。その場合、パーソナライズされていない広告が表示され、分析データは送信されません。当社は、初回画面で同意を確認する前に広告・分析SDKを起動しません。本ゲームにはインタースティシャル広告・バナー広告はなく、お客様が自ら選んで視聴するリワード広告のみがあります。</p>
+<p>任意の項目に同意しなくても、本ゲームのすべての機能をご利用いただけます。その場合、パーソナライズされていない広告が表示され、分析データは送信されません。広告SDKはゲーム起動時に開始しますが、パーソナライズ広告は同意いただいた場合のみ表示し（それまではパーソナライズされていない広告）、分析SDKは同意いただいた場合のみ起動します。欧州（EU・EEA・英国・スイス）では同意画面でお答えいただいた後に広告SDKを開始します。本ゲームにはインタースティシャル広告・バナー広告はなく、お客様が自ら選んで視聴するリワード広告のみがあります。</p>
 
 <h3>2. 業務の委託</h3>
 <p>当社は、利用目的の達成に必要な範囲で、次の事業者に個人データの取扱いを委託しており、各社の利用条件に基づき適切に取り扱われるよう管理します。</p>
@@ -57,7 +57,7 @@
 <table>
 <tr><th>提供先・委託先</th><th>所在国</th><th>項目</th><th>目的</th></tr>
 <tr><td>Unity Technologies Inc.（米国）および ironSource Ltd.（イスラエル）（Unity LevelPlay）<br><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">プライバシーポリシー</a></td><td>米国、イスラエル等</td><td>上表の広告に関する項目</td><td>広告の仲介・表示・報酬確認・効果測定、（同意時）パーソナライズ広告</td></tr>
-<tr><td>LevelPlay のメディエーションで連携する広告ネットワーク<br><span class="todo">［連携広告ネットワークの一覧（事業者名・所在国・ポリシーURL）— リリース構成に合わせて記載（要確認）］</span></td><td>米国等</td><td>広告ID、IPアドレス、端末情報、広告の利用履歴</td><td>広告の表示・効果測定、（同意時）パーソナライズ広告</td></tr>
+<tr><td>LevelPlay のメディエーションで連携する広告ネットワーク<br>Unity Ads（Unity Technologies Inc.、米国）、ironSource Ads（ironSource Ltd.、イスラエル）<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">プライバシーポリシー</a><br>Google AdMob（Google LLC、米国）<a href="https://policies.google.com/privacy">プライバシーポリシー</a></td><td>米国等</td><td>広告ID、IPアドレス、端末情報、広告の利用履歴</td><td>広告の表示・効果測定、（同意時）パーソナライズ広告</td></tr>
 <tr><td>GameAnalytics ApS（デンマーク）<br><a href="https://gameanalytics.com/privacy">プライバシーポリシー</a></td><td>デンマーク（EU）等</td><td>上表の分析に関する項目</td><td>ゲーム分析</td></tr>
 <tr><td>Google LLC（米国）（Google Play の課金）<br><a href="https://policies.google.com/privacy">プライバシーポリシー</a></td><td>米国等</td><td>購入した商品、購入確認情報</td><td>決済・購入確認・返金</td></tr>
 </table>
@@ -73,7 +73,7 @@
 <table>
 <tr><th>送信先（モジュール）</th><th>送信される情報</th><th>送信先での利用目的</th><th>詳細・停止方法</th></tr>
 <tr><td>Unity Technologies Inc.／ironSource Ltd.（Unity LevelPlay SDK）</td><td>広告ID、IPアドレス、端末の機種・OS・言語、アプリの利用状況、広告の表示・視聴・クリック履歴、プレイヤーID、同意の有無</td><td>広告の仲介・配信、リワード報酬の確認、不正防止、効果測定、（同意時）パーソナライズ広告</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">ポリシー</a>／パーソナライズ広告は 設定 &gt; プライバシー設定 で停止、広告IDは Android の 設定 &gt; Google &gt; 広告 で削除・リセット</td></tr>
-<tr><td>LevelPlay で連携する広告ネットワーク <span class="todo">［一覧を記載（要確認）］</span></td><td>広告ID、IPアドレス、端末情報、広告の表示・クリック履歴</td><td>広告の配信・効果測定、（同意時）パーソナライズ広告</td><td>各社のポリシー／上記と同じ方法で停止</td></tr>
+<tr><td>LevelPlay で連携する広告ネットワーク（Unity Ads、ironSource Ads、Google AdMob）</td><td>広告ID、IPアドレス、端末情報、広告の表示・クリック履歴</td><td>広告の配信・効果測定、（同意時）パーソナライズ広告</td><td>各社のポリシー／上記と同じ方法で停止</td></tr>
 <tr><td>GameAnalytics ApS（GameAnalytics SDK）</td><td>プレイヤーID、端末の機種・OSバージョン、国（IPアドレスから推定）、セッション、進行・通貨・広告・購入のイベント、エラー情報</td><td>ゲームの分析・改善</td><td><a href="https://gameanalytics.com/privacy">ポリシー</a>／同意した場合のみ送信。設定 &gt; プライバシー設定 で停止</td></tr>
 <tr><td>Google LLC（Google Play 課金ライブラリ／Unity IAP 経由）</td><td>購入する商品、購入の確認情報</td><td>決済、購入の確認・復元、返金</td><td><a href="https://policies.google.com/privacy">ポリシー</a>／購入時のみ送信</td></tr>
 </table>
@@ -87,7 +87,7 @@
 <h3>7. 安全管理措置</h3>
 <p>- 基本方針・規律：本ポリシーを定め、取得する項目を必要最小限とし、氏名・連絡先など直接本人を識別できる情報は本ゲームで取得しません。<br>
 - 組織的・人的安全管理措置：お問い合わせメールおよびパートナーの管理画面は代表者（個人情報の取扱責任者）のみが取り扱います。<br>
-- 物理的・技術的安全管理措置：当社は利用者データを保管するサーバーを運営せず、通信を暗号化（HTTPS）するSDKのみを利用し、同意の前には広告・分析SDKを起動しません。<br>
+- 物理的・技術的安全管理措置：当社は利用者データを保管するサーバーを運営せず、通信を暗号化（HTTPS）するSDKのみを利用し、パーソナライズ広告と分析は同意いただいた場合のみ利用します。<br>
 - 外的環境の把握：当社は大韓民国に所在し、同国で個人データを取り扱っています。同国の個人情報の保護に関する制度（個人情報保護法および個人情報保護委員会による監督）を把握したうえで安全管理措置を講じています。外国の提供先・委託先については第4項をご覧ください。</p>
 
 <h3>8. 開示・訂正・利用停止・削除等のご請求</h3>

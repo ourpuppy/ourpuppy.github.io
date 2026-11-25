@@ -37,7 +37,7 @@
 <tr><td>고객 문의 (메일)</td><td>이메일 주소, 문의 내용, 플레이어 ID, 기기 모델</td><td>문의 답변, 데이터 삭제 처리</td><td>이용자 요청</td></tr>
 </table>
 <p>수집 방법: 게임을 실행하고 이용할 때 게임과 위 SDK가 자동으로 만들거나 수집하며, 문의 정보는 이용자가 메일을 보낼 때 받습니다. 플레이어 ID는 첫 실행 때 기기에서 무작위로 만든 12자리 값으로, 이름·연락처와 연결되지 않으며 GameAnalytics 사용자 ID와 LevelPlay 사용자 ID로도 쓰입니다.</p>
-<p>선택 항목에 동의하지 않아도 게임을 모두 이용할 수 있습니다. 이 경우 맞춤형이 아닌 일반 광고가 표시되고 분석 데이터는 전송되지 않습니다. 회사는 첫 화면에서 동의를 받기 전에는 광고·분석 SDK를 시작하지 않습니다. 게임에는 전면 광고·배너 광고가 없고, 이용자가 직접 선택하는 보상형 광고만 있습니다.</p>
+<p>선택 항목에 동의하지 않아도 게임을 모두 이용할 수 있습니다. 이 경우 맞춤형이 아닌 일반 광고가 표시되고 분석 데이터는 전송되지 않습니다. 광고 SDK는 게임을 켤 때 시작하지만, 맞춤형 광고는 동의한 경우에만 표시하고(그 전에는 일반 광고), 분석 SDK는 동의한 경우에만 시작합니다. 유럽(EU·EEA·영국·스위스)에서는 동의 창에 답한 뒤에 광고 SDK를 시작합니다. 게임에는 전면 광고·배너 광고가 없고, 이용자가 직접 선택하는 보상형 광고만 있습니다.</p>
 
 <h3>2. 개인정보 처리의 위탁</h3>
 <p>회사는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리 업무를 맡기고 있으며, 각 사의 서비스 이용 조건에 따라 개인정보가 안전하게 처리되도록 관리합니다.</p>
@@ -59,7 +59,7 @@
 <table>
 <tr><th>이전받는 자 (연락처)</th><th>이전 국가</th><th>이전 항목</th><th>이전 목적</th><th>보유·이용 기간</th></tr>
 <tr><td>Unity Technologies Inc., ironSource Ltd. (Unity LevelPlay)<br>privacy@unity3d.com<br><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">개인정보 처리방침</a></td><td>미국, 이스라엘 등 (각 사 서버 소재국)</td><td>1번 표의 광고 항목</td><td>광고 중개·표시·보상 확인·측정, (동의 시) 맞춤형 광고</td><td>각 사 방침에 따른 기간. 삭제 요청 시 회사가 삭제를 요청</td></tr>
-<tr><td>LevelPlay 미디에이션으로 연결된 광고 네트워크<br><span class="todo">[연동 광고 네트워크 목록(회사명·국가·방침 링크) — 출시 구성에 맞춰 기재]</span></td><td>미국 등 (각 사 서버 소재국)</td><td>광고 ID, IP 주소, 기기 정보, 광고 이용 기록</td><td>광고 표시·측정, (동의 시) 맞춤형 광고</td><td>각 사 방침에 따른 기간</td></tr>
+<tr><td>LevelPlay 미디에이션으로 연결된 광고 네트워크<br>Unity Ads (Unity Technologies Inc., 미국), ironSource Ads (ironSource Ltd., 이스라엘) — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">개인정보 처리방침</a><br>Google AdMob (Google LLC, 미국) — <a href="https://policies.google.com/privacy">개인정보 처리방침</a></td><td>미국 등 (각 사 서버 소재국)</td><td>광고 ID, IP 주소, 기기 정보, 광고 이용 기록</td><td>광고 표시·측정, (동의 시) 맞춤형 광고</td><td>각 사 방침에 따른 기간</td></tr>
 <tr><td>GameAnalytics ApS<br>privacy@gameanalytics.com<br><a href="https://gameanalytics.com/privacy">개인정보 처리방침</a></td><td>덴마크(EU) 등 (서버 소재국)</td><td>1번 표의 분석 항목</td><td>게임 분석</td><td>각 사 방침에 따른 기간. 삭제 요청 시 회사가 삭제를 요청</td></tr>
 <tr><td>Google LLC (Google Play 결제)<br><a href="https://policies.google.com/privacy">개인정보처리방침</a></td><td>미국 등</td><td>구매 상품, 구매 확인 정보</td><td>결제·구매 확인·환불</td><td>Google 방침과 관련 법령에 따른 기간</td></tr>
 </table>
@@ -107,7 +107,7 @@
 
 <h3>12. 개인정보의 안전성 확보 조치</h3>
 <p>- 수집 최소화: 이름·연락처 등 직접 식별 정보는 게임에서 수집하지 않고, 회사는 이용자 정보를 보관하는 자체 서버를 운영하지 않습니다.<br>
-- 기술적 조치: 전송 구간을 암호화(HTTPS)하는 SDK만 이용하고, 동의 전에는 광고·분석 SDK를 시작하지 않습니다.<br>
+- 기술적 조치: 전송 구간을 암호화(HTTPS)하는 SDK만 이용하고, 맞춤형 광고와 분석은 동의한 경우에만 이용합니다.<br>
 - 관리적 조치: 문의 메일과 협력사 관리 화면은 개인정보 보호책임자만 이용하며, 처리 목적이 끝난 문의 메일은 6번의 기간에 따라 지웁니다.</p>
 
 <h3>13. 개인정보 보호책임자 및 열람청구 접수</h3>

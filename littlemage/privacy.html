@@ -38,7 +38,7 @@
 <tr><td>Support (email)</td><td>Email address, message, Player ID, device model</td><td>Answering requests, processing deletion</td><td>Your request</td></tr>
 </table>
 <p>The Player ID is a random 12-character value created on your device at first launch. It is not linked to your name or contact details, and it is also used as the GameAnalytics user ID and the LevelPlay user ID.</p>
-<p>You can play the whole Game without the optional consents. In that case ads are non-personalized and no analytics data is sent. We do not start the ad or analytics SDKs before you answer the consent screen on first launch. The Game has no interstitial or banner ads, only rewarded ads that you choose to watch.</p>
+<p>You can play the whole Game without the optional consents. In that case ads are non-personalized and no analytics data is sent. The ad SDK starts when you open the Game, but personalized ads are shown only with your consent (until then, ads are non-personalized), and the analytics SDK starts only with your consent. In Europe (EU, EEA, UK, Switzerland) the ad SDK starts only after you answer the consent screen. The Game has no interstitial or banner ads, only rewarded ads that you choose to watch.</p>
 
 <h3>2. Service providers</h3>
 <table>
@@ -58,7 +58,7 @@
 <table>
 <tr><th>Recipient</th><th>Country</th><th>Data</th><th>Purpose</th><th>Retention</th></tr>
 <tr><td>Unity Technologies Inc. and ironSource Ltd. (Unity LevelPlay) — privacy@unity3d.com, <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">privacy policy</a></td><td>USA, Israel and others</td><td>Advertising data above</td><td>Ad mediation, delivery, reward verification, measurement; personalized ads with consent</td><td>Per the provider's policy; deletion requested on your request</td></tr>
-<tr><td>Ad networks connected through LevelPlay mediation — <span class="todo">[list of mediated ad networks (company, country, policy link) — fill in for the release configuration]</span></td><td>USA and others</td><td>Advertising ID, IP address, device info, ad interaction data</td><td>Showing and measuring ads; personalized ads with consent</td><td>Per each network's policy</td></tr>
+<tr><td>Ad networks connected through LevelPlay mediation — Unity Ads (Unity Technologies Inc., USA), ironSource Ads (ironSource Ltd., Israel) — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">privacy policy</a>; Google AdMob (Google LLC, USA) — <a href="https://policies.google.com/privacy">privacy policy</a></td><td>USA and others</td><td>Advertising ID, IP address, device info, ad interaction data</td><td>Showing and measuring ads; personalized ads with consent</td><td>Per each network's policy</td></tr>
 <tr><td>GameAnalytics ApS — privacy@gameanalytics.com, <a href="https://gameanalytics.com/privacy">privacy policy</a></td><td>Denmark (EU) and others</td><td>Analytics data above</td><td>Game analytics</td><td>Per the provider's policy; deletion requested on your request</td></tr>
 <tr><td>Google LLC (Google Play Billing) — <a href="https://policies.google.com/privacy">privacy policy</a></td><td>USA and others</td><td>Purchased item, purchase confirmation</td><td>Payments, purchase verification, refunds</td><td>Per Google's policy and applicable law</td></tr>
 </table>
@@ -87,7 +87,7 @@ We act on requests within 10 days and report the result, including the partners'
 <p>The Game is not directed to children under 14 (or a higher age where local law requires). We ask users to confirm they are 14 or older on first launch. If we learn that we collected data from a child without valid parental consent, we will delete it. Parents can contact us at the email below.</p>
 
 <h3>9. Security</h3>
-<p>We collect as little as possible, do not collect directly identifying information in the Game, do not run our own player-data server, only use SDKs that encrypt data in transit (HTTPS), and do not start the ad or analytics SDKs before consent. Only the operator handles support emails and partner dashboards.</p>
+<p>We collect as little as possible, do not collect directly identifying information in the Game, do not run our own player-data server, only use SDKs that encrypt data in transit (HTTPS), and use personalized ads and analytics only with your consent. Only the operator handles support emails and partner dashboards.</p>
 
 <h3>10. Changes</h3>
 <p>We will announce changes in the Game or on this page at least 7 days before they take effect (30 days for changes that reduce your rights), and ask for consent again on the first screen when required. This is version 1, first effective on October 27, 2026.</p>
